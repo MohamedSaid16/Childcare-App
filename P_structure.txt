@@ -1,0 +1,142 @@
+nursery-management-app/
+├── README.md
+├── .env
+├── package.json
+├── frontend/
+│   ├── package.json
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── assets/
+│       │   ├── images/           # banner, activities, classrooms, child photos
+│       │   └── icons/
+│       │
+│       ├── components/
+│       │   ├── Banner.jsx
+│       │   ├── ImageGrid.jsx
+│       │   ├── Footer.jsx
+│       │   ├── Navbar.jsx
+│       │   ├── ProtectedRoute.jsx
+│       │   ├── notifications/
+│       │   │    └── NotificationBell.jsx
+│       │   └── forms/
+│       │        ├── LoginForm.jsx
+│       │        ├── RegisterParentForm.jsx
+│       │        ├── AddChildForm.jsx
+│       │        ├── PaymentForm.jsx
+│       │        └── ActivityForm.jsx
+│       │
+│       ├── pages/
+│       │   ├── HomePage.jsx
+│       │   ├── LoginPage.jsx
+│       │   ├── NotificationsPage.jsx
+│       │   ├── parent/
+│       │   │    ├── ParentDashboard.jsx
+│       │   │    ├── TrackChild.jsx
+│       │   │    ├── RegisterChild.jsx
+│       │   │    ├── ParentMessages.jsx
+│       │   │    ├── ParentProfile.jsx
+│       │   │    ├── ParentPayments.jsx
+│       │   │    └── ChildDailyReport.jsx
+│       │   ├── employee/
+│       │   │    ├── EmployeeDashboard.jsx
+│       │   │    ├── AttendancePage.jsx
+│       │   │    ├── DailyActivities.jsx
+│       │   │    ├── ChildNotes.jsx
+│       │   │    ├── EmployeeProfile.jsx
+│       │   │    └── MedicalAlertsPage.jsx
+│       │   └── admin/
+│       │        ├── AdminDashboard.jsx
+│       │        ├── ManageParents.jsx
+│       │        ├── ManageEmployees.jsx
+│       │        ├── ManageChildren.jsx
+│       │        ├── ManagePayments.jsx
+│       │        ├── ManageClasses.jsx
+│       │        ├── AdminReports.jsx
+│       │        └── CapacityManagement.jsx
+│       │
+│       ├── context/
+│       │   ├── AuthContext.jsx
+│       │   ├── UserRoleContext.jsx
+│       │   └── NotificationContext.jsx
+│       │
+│       ├── hooks/
+│       │   ├── useAuth.js
+│       │   ├── useNotifications.js
+│       │   └── useFetch.js
+│       │
+│       ├── utils/
+│       │   ├── api.js
+│       │   ├── billing.js
+│       │   └── validators.js
+│       │
+│       ├── router/
+│       │   └── AppRouter.jsx
+│       │
+│       ├── App.jsx
+│       ├── index.js
+│       └── App.css
+│
+├── backend/
+│   ├── package.json
+│   ├── .env
+│   ├── server.js
+│   ├── config/
+│   │   └── db.js                    # MySQL / PostgreSQL connection
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── parentController.js
+│   │   ├── employeeController.js
+│   │   ├── adminController.js
+│   │   ├── activityController.js
+│   │   ├── attendanceController.js
+│   │   ├── paymentController.js
+│   │   └── notificationController.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── parentRoutes.js
+│   │   ├── employeeRoutes.js
+│   │   ├── adminRoutes.js
+│   │   ├── activityRoutes.js
+│   │   ├── attendanceRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   └── notificationRoutes.js
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.js        # JWT verification
+│   │   ├── roleMiddleware.js        # RBAC (parent/employee/admin)
+│   │   └── errorHandler.js
+│   │
+│   ├── models/
+│   │   ├── User.js                  # users (parents, employees, admins)
+│   │   ├── Child.js
+│   │   ├── Attendance.js
+│   │   ├── Activity.js
+│   │   ├── Payment.js
+│   │   ├── Notification.js
+│   │   └── MedicalAlert.js
+│   │
+│   ├── services/
+│   │   ├── billingService.js        # invoice calculation + discounts + VAT
+│   │   ├── pdfService.js            # generate invoice PDFs
+│   │   ├── notificationService.js   # push / email / in-app
+│   │   └── mailService.js
+│   │
+│   ├── utils/
+│   │   ├── helpers.js
+│   │   ├── generateInvoicePDF.js
+│   │   └── calculatePresence.js    
+│   │
+│   └── scripts/
+│       └── seed.js                
+│
+├── docs/
+│   ├── uml/
+│   │   ├── activity-diagram.puml    
+│   │   └── class-diagram.puml
+│   └── api.md
+└── infra/
+    ├── docker-compose.yml
+    └── Dockerfile
