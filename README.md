@@ -172,7 +172,7 @@ git --version
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/nursery-management-app.git
+git clone https://github.com/MohamedSaid16/nursery-management-app.git
 cd nursery-management-app
 ```
 
@@ -421,7 +421,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## 👨‍💻 Authors
 
-- **Your Name** — [GitHub](https://github.com/yourusername)
+- **Ghoulam Mohamed Said** — [GitHub](https://github.com/MohamedSaid16)
 
 ---
 
